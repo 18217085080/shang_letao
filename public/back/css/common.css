@@ -4,6 +4,14 @@ a:visited,
 a:active{
     text-decoration: none;
 }
+ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.red{
+    color:red;
+}
 .body-by{
     background-color: #222D32;
 }
@@ -15,4 +23,100 @@ a:active{
     line-height: 40px;
     text-align: center;
     font-size: 20px;
+}
+.lt_aside{
+    width: 180px;
+    height: 100%;
+    background-color: #222D32;
+    left: 0;
+    top: 0;
+    position: fixed;
+    z-index: 999;
+    transition: all 1s;
+}
+.lt_aside.hidnmenu{
+    left: -180px;
+}
+.lt_aside .brand{
+    height: 50px;
+    width: 100%;
+    background-color: #367FA9;
+    line-height:50px;
+    text-align: center;
+    font-size: 15px;
+}
+.lt_aside .brand a{
+    color:#fff;
+}
+.lt_aside .user{
+    height: 180px;
+    margin-top: 30px;
+}
+.lt_aside .user img{
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+}
+.lt_aside .user p{
+    height: 40px;
+    line-height: 40px;
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+}
+.lt_aside .nav a{
+    display: block;
+    width: 100%;
+    height: 40px;
+    line-height: 40px;
+    color:#fff;
+    padding-left:40px;
+    border-left:3px solid transparent;
+}
+.lt_aside .nav  i{
+    margin-right:7px;
+}
+.lt_aside .nav a.current{
+    background-color: #1D1F21;
+    border-left:3px solid #069;
+}
+.lt_aside .nav .child a{
+    padding-left:60px;
+}
+.lt_main{
+    height: 1000px;
+    background-color: pink;
+    /*设置padding的作用是  为了显示路劲导航*/
+    padding-left: 180px;
+    padding-top:50px;
+    transition: all 1s;
+}
+.lt_main.hidnmenu{
+    padding-left: 0;
+}
+.lt_main .lt_topbar{
+    height: 50px;
+    width: 100%;
+    background-color: #3C8DBC;
+    position: fixed;
+    left: 0;
+    top: 0;
+    padding-left: 180px;
+    transition: all 1s;
+}
+.lt_topbar.hidnmenu{
+    padding: 0;
+}
+.lt_main .lt_topbar a{
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    font-size: 20px;
+}
+.lt_main  .mt_20{
+    margin-top: 20px;
 }

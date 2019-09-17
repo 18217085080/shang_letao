@@ -21,4 +21,39 @@ $(document).ajaxStop(function(){
     //    关闭进度条
         NProgress.done();
     },(500));
-})
+});
+
+$(function(){
+//    1 分类管理切换功能
+    $(".nav .category").click(function(){
+    //    切换child的显示按钮
+       $(".nav .child").stop().slideToggle();
+    });
+//    2 左侧边栏切换功能
+    $(".icon-menu").click(function(){
+      $(".lt_aside").toggleClass("hidnmenu");
+      $(".lt_topbar").toggleClass("hidnmenu");
+        $(".lt_main").toggleClass("hidnmenu");
+    });
+//    点击topbar退出按钮  弹出模态框
+    $(".icon-logout").click(function(){
+        $("#logoutModal").modal("show");
+    })
+//    4 点击模态框的退出功能   实现推迟功能
+    $("#logoutBtn").click(function(){
+    //    发送ajax请求 进行退出
+        $.ajax({
+            type:"get",
+            url:"/employee/employeeLogout",
+            dataType:"json",
+            success:function(info){
+                console.log(info);
+                if(info.success){
+                //    退出成功跳到登录页
+                    location.href = "login.html";
+                }
+            }
+        })
+    })
+
+});
