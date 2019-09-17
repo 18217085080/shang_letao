@@ -23,6 +23,35 @@ $(document).ajaxStop(function(){
     },(500));
 });
 
+//登录拦截功能 登录拦击页面不需要校验  不用登录就能访问
+//发送ajax请求 查询用户状态即可
+//（1） 用户已登录 啥也不用做 让用户继续访问
+// （2） 用户未登录 拦截到登录页
+//indexOf() 方法可返回某个指定的字符串值在字符串中首次出现的位置。
+//如果没有找到匹配的字符串则返回 -1
+// location.href  当前的地址栏
+//在地址栏中没找到 login.html === -1  说明没找到登录页
+if (location.href.indexOf("login.html") === -1){
+//    地址栏中没有login.html  说明不是登录页 需要进行拦截登录
+$.ajax({
+    type: "get",
+    url: "/employee/checkRootLogin",
+    dataType: "json",
+    success: function( info ) {
+        console.log( info )
+        if ( info.success ) {
+            // 已登录, 让用户继续访问
+            console.log("用户已登录")
+        }
+
+        if ( info.error === 400 ) {
+            // 未登录, 拦截到登录页
+            location.href = "login.html";
+        }
+    }
+})
+}
+
 $(function(){
 //    1 分类管理切换功能
     $(".nav .category").click(function(){
