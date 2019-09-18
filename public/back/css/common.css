@@ -87,7 +87,7 @@ ul{
 }
 .lt_main{
     height: 1000px;
-    background-color: pink;
+    /*background-color: pink;*/
     /*设置padding的作用是  为了显示路劲导航*/
     padding-left: 180px;
     padding-top:50px;
