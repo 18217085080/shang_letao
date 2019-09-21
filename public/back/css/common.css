@@ -120,3 +120,9 @@ ul{
 .lt_main  .mt_20{
     margin-top: 20px;
 }
+
+.table.table-bordered th,
+.table.table-bordered td {
+  vertical-align: middle;
+  text-align: center;
+}
