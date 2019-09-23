@@ -1,0 +1,43 @@
+.lt_nav {
+  padding: 9px;
+}
+
+.lt_nav li {
+  float: left;
+  width: 20%;
+  /* font-size: 20px; */
+  text-align: center;
+}
+
+.lt_nav li img {
+  width: 30px;
+}
+
+.lt_nav li p {
+  font-size: 10px;
+  color: #000;
+}
+.lt_product{
+  padding: 10px;
+}
+.lt_product_item{
+  float: left;
+  width: 48%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.lt_product_item img{
+ width: 100%;
+}
+.lt_product_item:nth-child(2n+1){
+ margin-right: 4%;
+}
+.lt_product_item .pice{
+ color: red;
+}
+.lt_product_item .oldpice{
+ text-decoration: line-through;
+ /* 删除线 */
+}
