@@ -96,6 +96,12 @@ $(function () {
   $(".search_btn").click(function(){
     // 获取关键字 trim 函数用于去除字符串两端的空白字符
     var key = $(".search_input").val().trim();
+    if(key === ""){
+      mui.toast("请输入搜索关键字",{
+        duration:2000
+      })
+      return;
+    }
     // 获取数组
     var arr = getHistory();
 
@@ -120,6 +126,8 @@ $(function () {
 
     // 清空输入框
     $(".search_input").val("");
+    // 添加跳转 跳转到产品列表
+    location.href = "searchList.html?=" + key;
   })
 
 });
