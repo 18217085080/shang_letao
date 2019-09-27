@@ -127,7 +127,8 @@ $(function () {
     // 清空输入框
     $(".search_input").val("");
     // 添加跳转 跳转到产品列表
-    location.href = "searchList.html?=" + key;
+    location.href = "searchList.html?key=" + key;
+    // location.href = "searchList.html?key=" + key;
   })
 
 });

@@ -1,0 +1,64 @@
+.lt_sort{
+  height: 30px;
+  line-height: 30px;
+  background-color: #EEEEEE;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 10px;
+}
+.lt_sort a {
+  float: left;
+  width: 25%;
+  color: #666;
+}
+.lt_sort a.current {
+ 
+  color: orange;
+}
+.lt_product{
+  padding: 10px;
+}
+.lt_product_item{
+  float: left;
+  width: 48%;
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.lt_product_item img{
+ width: 100%;
+}
+.lt_product_item:nth-child(2n+1){
+ margin-right: 4%;
+}
+.lt_product_item .pice{
+ color: red;
+}
+.lt_product_item .oldpice{
+ text-decoration: line-through;
+ /* 删除线 */
+}
+
+/* 加载器 */
+.loading{
+  height: 50px;
+  width: 50px;
+  border: 3px solid #845f3f;
+  position: absolute;
+  left: 50%;
+  top:150px;
+  transform: translateX(-50%);
+  /* 使用动画 */
+  /*动画名称  动画时间  动画状态 */
+  animation:rotate 2s infinite ease-in-out;
+}
+/* 动画 */
+@keyframes rotate{
+  form{
+    transform: translateX(-50%) rotate(0deg);
+  }
+  to{
+    transform: translateX(-50%) rotate(360deg);
+  }
+}
