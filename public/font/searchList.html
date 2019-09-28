@@ -66,7 +66,7 @@
                                             
                                               
                                           </ul> -->
-                                          <div class="loading"></div>
+                                          <!-- <div class="loading"></div> -->
                                       </div>
                 </div>
             </div>
@@ -106,10 +106,10 @@
    
     <script type="text/html" id="proudectTpl">
       
-      <ul>
+      <ul class="mui.clearfix">
         {{ each data v i }}
         <li class="lt_product_item">
-            <a href="#">
+            <a href="product.html>productId={{v.id}}" data-type="{{v.id}}">
                 <img src="{{v.pic[0].picAddr}}" alt="">
                 <p class="mui-ellipsis-2">{{ v.proName}} </p>
                 <p>
@@ -127,7 +127,7 @@
     <script src="./lib/zepto/zepto.min.js"> </script>
     <script src="./lib/artTemplate/template-web.js"></script>
     <script src="./js/common.js"></script>
-    <script src="./js/searchList.js"></script>
+    <script src="./js/searchList1.js"></script>
     
 
 </body>

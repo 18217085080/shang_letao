@@ -10,7 +10,8 @@ $(function(){
 
   // 已进入页面  根据搜索关键字  发送请求进行页面渲染
   function render(){
-    // 准备请求数据
+    // 准备请求数据 渲染时 显示加载中的效果
+    $(".lt_product").html('<div class="loading"></div>');
     var params = {};
     // 三个比传的参数
     params.proName = $('.search_input').val();
